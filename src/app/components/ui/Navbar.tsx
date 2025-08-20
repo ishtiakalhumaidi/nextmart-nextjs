@@ -16,7 +16,8 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex justify-between max-w-10/12 mx-auto font-poppins pt-8 items-center">
+    <div className="flex justify-between px-30
+   font-poppins py-4 items-center fixed w-full mx-auto z-50 bg-gray-100">
       <Link className="text-4xl font-bold text-blue-300 " href={"/"}>
         NextMart
       </Link>
@@ -25,9 +26,10 @@ export default function Navbar() {
           {navLinks.map((nav) => (
             <Link
               className={`${
-                nav.link === pathname &&
-                "border-2 bg-white/30 text-blue-300 font-bold"
-              } py-1 px-2 rounded-full border-2 border-transparent hover:bg-white/40 hover:border-white  duration-50`}
+                nav.link === pathname
+                  ? "btn-outline border-transparent bg-blue-300"
+                  : "btn-ghost hover:bg-blue-300 border-transparent"
+              } btn rounded-2xl border-2 text-black`}
               key={nav.link}
               href={nav.link}
             >
@@ -37,10 +39,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div>
-        <Link
-          href={""}
-          className="bg-white text-xl rounded-2xl py-2 px-3 text-black hover:bg-transparent border-2 border-white hover:text-white duration-300 "
-        >
+        <Link href={""} className="btn btn-neutral rounded-2xl btn-lg ">
           Sign Up
         </Link>
       </div>

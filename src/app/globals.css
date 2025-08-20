@@ -1,4 +1,14 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: oklch(80.9% 0.105 251.813);
+  --color-primary-content: black;
+}
 
 :root {
   --background: #ffffff;
@@ -13,15 +23,8 @@
   --font-poppins: var(--font-poppins);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: poppins;
 }
