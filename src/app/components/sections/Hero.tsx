@@ -50,7 +50,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="pt-10">
+    <section >
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation

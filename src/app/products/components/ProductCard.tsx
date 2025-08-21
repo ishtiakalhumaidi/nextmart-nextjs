@@ -1,6 +1,7 @@
 "use client";
 import type { Product } from "@/lib/dbConnect";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface ProductCardProps {
@@ -30,9 +31,9 @@ export default function ProductCard({ product }: ProductCardProps) {
           <span className="badge badge-primary">{product.rating?.toFixed(1)}</span>
         </div>
         <div className="card-actions mt-2">
-          <button className="btn btn-sm btn-outline btn-primary rounded-lg w-full">
+          <Link href={`/products/${product._id}`} className="btn btn-sm btn-outline btn-primary rounded-lg w-full">
             Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>

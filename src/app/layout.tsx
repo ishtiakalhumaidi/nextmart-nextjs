@@ -38,8 +38,10 @@ export default function RootLayout({
         <header >
           <Navbar />
         </header>
-        {children}
+       <main className="pt-24">
+         {children}
 
+       </main>
         <Footer />
       </body>
     </html>
