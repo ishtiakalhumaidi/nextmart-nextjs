@@ -1,7 +1,6 @@
 import { collections, dbConnect } from "@/lib/dbConnect";
 import { ObjectId } from "mongodb";
 import Image from "next/image";
-import { json } from "stream/consumers";
 
 export default async function ProductDetails({ params }: { params: { id: string } }) {
    const db = await dbConnect(collections.products);

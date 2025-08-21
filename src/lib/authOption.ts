@@ -12,11 +12,11 @@ export const authOptions: NextAuthOptions = {
   session: { strategy: "jwt" },
 
   callbacks: {
-    async session({ session, token, user }) {
+    async session({ session }) {
       // Customize session object here if needed
       return session;
     },
-    async jwt({ token, user, account, profile, isNewUser }) {
+    async jwt({ token }) {
       return token;
     },
     async redirect({ url, baseUrl }) {

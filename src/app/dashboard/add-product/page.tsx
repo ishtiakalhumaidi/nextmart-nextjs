@@ -1,7 +1,6 @@
 import React from 'react';
 import AddProductForm, { Product } from './components/AddProductForm';
 import { collections, dbConnect } from '@/lib/dbConnect';
-import { toast } from 'react-toastify';
 
 export default function AddProduct() {
   async function handleSubmit(product: Product) {

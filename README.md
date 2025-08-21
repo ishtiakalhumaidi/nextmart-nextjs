@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NextMart
 
-## Getting Started
+A modern e-commerce web application built with Next.js featuring authentication, product management, and a sleek dark-themed interface.
 
-First, run the development server:
+## 🚀 Project Description
 
+NextMart is a full-stack product management system that allows users to browse products publicly and manage inventory through a protected dashboard. Features Google OAuth authentication, responsive design with DaisyUI components, and smooth user interactions.
+
+## Live Demo
+
+Check out the live project [here](https://nextmart-nextjs.vercel.app/).
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js (App Router)
+- **Language**: TypeScript
+- **Authentication**: NextAuth.js
+- **Database**: MongoDB
+- **Styling**: Tailwind CSS + DaisyUI
+- **UI Components**: React Icons
+- **Notifications**: React Toastify
+- **Carousel**: Swiper
+
+## 🚦 Route Summary
+
+| Route | Access | Description |
+|-------|--------|-------------|
+| `/` | Public | Landing page with hero section and product highlights |
+| `/login` | Public | Authentication page with Google OAuth |
+| `/products` | Public | Product catalog with search and filtering |
+| `/products/[id]` | Public | Individual product details page |
+| `/dashboard/add-product` | Protected | Product management form (requires authentication) |
+
+## 🔧 Setup & Installation
+
+### Prerequisites
+- Node.js 
+- MongoDB database
+
+### 1. Clone & Install
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd nextmart
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Environment Variables
+Create `.env.local`:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```env
+NEXTAUTH_SECRET=your-nextauth-secret-here
+NEXTAUTH_URL=http://localhost:3000
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+MONGODB_URI=mongodb://localhost:27017/nextmart
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Google OAuth Setup
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Create OAuth 2.0 credentials
+3. Add redirect URI: `http://localhost:3000/api/auth/callback/google`
+4. Copy credentials to `.env.local`
 
-## Learn More
+### 4. Run Development Server
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Visit `http://localhost:3000`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Public**: Landing page, product catalog, product details
+- **Protected**: Dashboard with product management
+- **UI**: toast notifications
+- **Database**: MongoDB integration for data persistence
 
-## Deploy on Vercel
+## 🚀 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy to Vercel:
+1. Push code to GitHub
+2. Import project in Vercel
+3. Add environment variables
+4. Update `NEXTAUTH_URL` to production domain
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🐛 Troubleshooting
+
+**Authentication Issues**: Check Google OAuth credentials and restart server
+**Database Issues**: Verify MongoDB connection string
+**Build Errors**: Clean install with `rm -rf node_modules && npm install`
+
+---
+
+**Built with Next.js, NextAuth.js, and MongoDB**
