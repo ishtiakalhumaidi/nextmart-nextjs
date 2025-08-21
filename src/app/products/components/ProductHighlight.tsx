@@ -42,4 +42,5 @@ const ProductHighlight = async ({ limit }: ProductHighlightProps) => {
   );
 };
 
+
 export default ProductHighlight;

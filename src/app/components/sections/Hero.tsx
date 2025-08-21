@@ -82,7 +82,7 @@ export default function Hero() {
                   height={905}
                   src={banner.imageSrc}
                   alt=""
-                  className="object-cover w-3xl h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+                  className="duration-300 hover:scale-110 object-cover w-3xl h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
                 />
               </div>
             </div>
