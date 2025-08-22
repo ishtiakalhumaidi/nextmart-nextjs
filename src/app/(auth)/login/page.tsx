@@ -20,17 +20,17 @@ export default function LoginPage() {
   }, [error]);
 
   return (
-      <div className="flex">
-        <div className="flex-1 flex flex-col items-center justify-center gap-4"> 
+      <div className="flex md:flex-row flex-col-reverse">
+        <div className="flex-1 flex flex-col items-center justify-center gap-4 mb-20"> 
             <h1 className="text-3xl font-bold">Please Login With</h1>
             <Button/></div>
-        <div className="overflow-hidden bg-primary lg:h-159 flex-1">
+        <div className="overflow-hidden bg-primary lg:h-159 h- md:flex-1">
             <Image 
             width={1080}
             height={1080}
             src={'/16191.jpg'}
             alt="auth"
-            className="object-cover w-full h-full"/>
+            className="object-cover md:w-full max-h-full"/>
         </div>
     </div>
   );

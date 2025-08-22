@@ -59,9 +59,9 @@ export default function Hero() {
       >
         {banners.map((banner, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between max-w-10/12">
+            <div className="flex flex-col-reverse justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between max-w-10/12">
               <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-                <h1 className="text-5xl font-bold leading-none sm:text-6xl">
+                <h1 className="text-3xl md:text-5xl font-bold leading-none sm:text-6xl">
                   {banner.title}
                 </h1>
                 <p className="mt-6 mb-8 text-lg sm:mb-12">{banner.subTitle}</p>
@@ -69,7 +69,7 @@ export default function Hero() {
                   <Link
                     rel="noopener noreferrer"
                     href={banner.buttonLink}
-                    className="btn bg-blue-300 rounded-full text-black btn-xl"
+                    className="btn bg-primary rounded-full text-lg md:text-2xl btn-xl"
                   >
                     <GiShoppingBag className="mr-2 font-bold" />
                     {banner.buttonText}

@@ -72,7 +72,7 @@ Visit `http://localhost:3000`
 
 - **Public**: Landing page, product catalog, product details
 - **Protected**: Dashboard with product management
-- **UI**: toast notifications
+- **UI**: toast notifications, responsive design.
 - **Database**: MongoDB integration for data persistence
 
 ## 🚀 Deployment

@@ -7,12 +7,12 @@ export default async function ProductDetails({ params }: { params: { id: string 
   
 
   const product = await db.findOne({_id:new ObjectId(params.id)})
-  return <div className="flex gap-4 py-16 max-w-10/12 mx-auto">
+  return <div className="flex gap-4 py-16 max-w-10/12 mx-auto flex-col md:flex-row">
     
 
-    <div className="flex-1 shadow-lg rounded-2xl overflow-hidden">
+    <div className="flex-1 flex justify-center items-center   rounded-2xl overflow-hidden">
       <Image
-      className="rounded-2xl hover:scale-130 duration-500"
+      className="rounded-2xl hover:scale-130 duration-500 shadow-lg"
       width={1080}
       height={720}
       src={product?.image}

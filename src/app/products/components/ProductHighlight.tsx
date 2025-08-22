@@ -24,14 +24,14 @@ const ProductHighlight = async ({ limit }: ProductHighlightProps) => {
       </p>
 
       <div
-        className={`grid gap-4 mx-auto ${
+        className={`grid gap-4 mx-auto w-full ${
           limit
-            ? "grid-cols-3 sm:grid-cols-5"
-            : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+            ? "grid-cols-1 sm:grid-cols-5"
+            : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         }`}
       >
         {products.map((product) => (
-          <div key={product._id?.toString()}>
+          <div className="mx-auto" key={product._id?.toString()}>
             <ProductCard
               product={{ ...product, _id: product._id.toString() }}
             />
