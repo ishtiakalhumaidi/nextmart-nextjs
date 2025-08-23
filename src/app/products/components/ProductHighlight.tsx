@@ -23,7 +23,7 @@ const ProductHighlight = async ({ limit }: ProductHighlightProps) => {
           : "Browse through our full collection of products and find what you need."}
       </p>
 
-      <div
+    <div
         className={`grid gap-4 mx-auto w-full ${
           limit
             ? "grid-cols-1 sm:grid-cols-5"

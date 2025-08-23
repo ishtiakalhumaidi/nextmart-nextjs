@@ -10,7 +10,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="card w-70 bg-base-100 shadow-md rounded-lg overflow-hidden">
+    <div className="card max-w-70 bg-base-100 shadow-md rounded-lg overflow-hidden">
       <figure className="h-40 w-full relative">
         <Image
           src={product.image || ""}
